@@ -1,0 +1,10 @@
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+@media(max-width: 800px) {
+    .center {
+        text-align: center;
+    }
+}
