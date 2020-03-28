@@ -4,11 +4,8 @@ import './Rank.css'
 const Rank = ({ name, entries }) => {
     return (
         <div>
-            <div className='white f3 center'>
+            <div className='white f2 fw3 center mb2'>
                 {`${name}, your current entry count is ${entries}`}
-            </div>
-            <div className='white f3 center'>
-                {entries}
             </div>
         </div>
     );

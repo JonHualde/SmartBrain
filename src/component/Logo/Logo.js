@@ -5,22 +5,24 @@ import brain from './brain.png'
 
 const Logo = () => {
     return (
-        <div className='ma4 mt0'>
+        <div className='mt0'>
             <Tilt 
-                className=  "Tilt br2 shadow-2" 
+                className=  "Tilt br2 shadow-2 " 
                 options={{  max : 25, 
-                            perspective: 150,
+                            perspective: 100,
                             scale: 0.95, }} 
-                style={{    height: 250, 
-                            width: 250,
+                style={{    height: '150px', 
+                            width: '150px',
                             display:'flex', 
                             alignItems:'center',
-                            justifyContent:'center' }} >
+                            justifyContent:'center',
+                            marginTop: '2vh'
+                            }} >
 
                 <div className="Tilt-inner">
                     <img 
-                        style={{height: '140px',
-                                width: '140px'}}
+                        style={{height: '110px',
+                                width: '110px'}}
                         src={brain} 
                         alt='logo'
                         /> 

@@ -4,13 +4,14 @@ import './ImageLinkForm.css'
 const ImageLinkForm = ({ onInputChange, onButtonSubmit }) => {
     return (
         <div >
-            <p className='f3 center'>
-                {'Clarify A.I will detect faces in your pictures'}
+            <p className='f4 fw4 i-m center lh-copy'>
+                Clarify A.I will detect a face automatically. <br/>
+                (Be sure the image is not too blurry)
             </p>
-            <div className='center'>
+            <div className='center mb2'>
                 <div className='pa4 br3 shadow-5 center form'>
                 <input  type='text'
-                        placeholder='Copy a url here'
+                        placeholder='Copy a picture URL here'
                         className='f4 pa2 w-70 inputbutton'
                         onChange={onInputChange}
                          />

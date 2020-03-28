@@ -22,6 +22,12 @@ class Register extends React.Component {
     this.setState({password: event.target.value})
   }
 
+  handleKeyPress = (event) => {
+  if(event.key === 'Enter'){
+    this.onSubmitSignIn()
+    }
+  }
+
   onSubmitSignIn = () => {
     fetch('https://afternoon-hamlet-61350.herokuapp.com/register', {
       method: 'post',
@@ -46,7 +52,7 @@ class Register extends React.Component {
       <article className="br3 ba b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
         <main className="pa4 black-80">
           <div className="measure">
-            <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
+            <fieldset id="register" className="ba b--transparent ph0 mh0">
               <legend className="f1 fw6 ph0 mh0">Register</legend>
               <div className="mt3">
                 <label className="db fw6 lh-copy f6" htmlFor="name">Name</label>
@@ -76,6 +82,7 @@ class Register extends React.Component {
                   name="password"
                   id="password"
                   onChange={this.onPasswordChange}
+                  onKeyPress={this.handleKeyPress}
                 />
               </div>
             </fieldset>
@@ -86,6 +93,10 @@ class Register extends React.Component {
                 type="submit"
                 value="Register"
               />
+              <p 
+              className="f7 fw3">
+                (It might take a few seconds the first time, please wait...)
+              </p>
             </div>
           </div>
         </main>

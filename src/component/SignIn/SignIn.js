@@ -17,6 +17,12 @@ class Signin extends React.Component {
     this.setState({signInPassword: event.target.value})
   }
 
+  handleKeyPress = (event) => {
+  if(event.key === 'Enter'){
+    this.onSubmitSignIn()
+    }
+  }
+
   onSubmitSignIn = () => {
     fetch('https://afternoon-hamlet-61350.herokuapp.com/signin', {
       method: 'post',
@@ -61,6 +67,7 @@ class Signin extends React.Component {
                   name="password"
                   id="password"
                   onChange={this.onPasswordChange}
+                  onKeyPress={this.handleKeyPress}
                 />
               </div>
             </fieldset>
@@ -73,7 +80,7 @@ class Signin extends React.Component {
               />
             </div>
             <div className="lh-copy mt3">
-              <p  onClick={() => onRouteChange('register')} className="f6 link dim black db pointer">Register</p>
+              <p  onClick={() => onRouteChange('register')} className="f7 link dim black db pointer underline">Register</p>
             </div>
           </div>
         </main>

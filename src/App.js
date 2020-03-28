@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import Navigation from './component/Navigation/Navigation';
-import Logo from './component/Logo/Logo';
 import ImageLinkForm from './component/ImageLinkForm/ImageLinkForm';
 import FaceRecognition from './component/FaceRecognition/FaceRecognition';
 import Rank from './component/Rank/Rank';
@@ -150,7 +149,6 @@ class App extends Component{
         entries: data.entries,
         joined: data.joined
     }})
-    
   }
 
   calculateFaceLocation = (data) => {
@@ -220,11 +218,12 @@ class App extends Component{
       <div className="App">
         <Particles 
           params={particlesOptions}
-          className='particles'/>
+          className='particles'
+          />
         <Navigation isSignedIn={isSignedIn} onRouteChange={this.onRouteChange} />
         { route === 'home'
           ? <div>
-              <Logo />
+              {/* <Logo /> */}
               <Rank
                 name={this.state.user.name}
                 entries={this.state.user.entries}
