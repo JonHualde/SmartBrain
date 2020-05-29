@@ -1,3 +1,3 @@
 # SmartBrain
 
-SmartBrain front end files.
+Smart Brain front end files.
